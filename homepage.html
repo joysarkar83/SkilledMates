@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skilled Mates</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <div class="header">
+        <a href="homepage.html"><img src="images/skilledmates_logo_cropped.png" alt="Skilledmates Logo"></a>
+        <h2 style="color: #eff6be; padding-left: 187px;">SKILLED MATES</h2>
+        <div class="right">
+            <a style="color: #eff6be" href="profile.html" id="profile-link">PROFILE</a>
+            <a style="color: #eff6be" href="post.html" id="post-link">POST</a>
+            <a style="color: #eff6be" href="index.html" id="logout-link">LOG OUT</a>
+        </div>
+    </div>
+    
+    <div class="req">      
+        <h1>REQUESTS</h1>
+    </div>
+    
+    <div class="requests-container" id="announcements-container">
+        <!-- Dynamic announcements will be injected here -->
+    </div>
+
+    <div class="footer" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+        <p>&copy; 2024 Skilled Mates. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Fetch and display announcements when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchAnnouncements();
+        });
+
+        function fetchAnnouncements() {
+            fetch('/announcements')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayAnnouncements(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching announcements:', error);
+                });
+        }
+
+        function displayAnnouncements(announcements) {
+            const announcementsContainer = document.getElementById('announcements-container');
+            announcementsContainer.innerHTML = ''; // Clear previous announcements
+
+            announcements.forEach(announcement => {
+                const requestBox = document.createElement('div');
+                requestBox.className = 'request-box';
+                requestBox.innerHTML = `
+                    <h3>${announcement.title}</h3>
+                    <div class="details">
+                        <span>Contact: ${announcement.contact}</span>
+                    </div>
+                    <div class="description"> ${announcement.description}</div>
+                `;
+                announcementsContainer.appendChild(requestBox);
+            });
+        }
+    </script>
+</body>
+</html>

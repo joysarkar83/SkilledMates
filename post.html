@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post a Request</title>
+  <link rel="stylesheet" href="post.css">
+</head>
+<body>
+    <div class="header">
+        <a href="homepage.html"><img src="images/skilledmates_logo_cropped.png" alt="Skilledmates Logo"></a>
+        <h2 style="color: #eff6be; padding-left: 190px;">SKILLED MATES</h2>
+        <div class="right">
+            <a style="color: #eff6be" href="profile.html" id="profile-link">PROFILE</a>
+            <a style="color: #eff6be" href="homepage.html" id="home-link">HOME</a>
+            <a style="color: #eff6be" href="index.html" id="logout-link">LOG OUT</a>
+        </div>
+    </div>
+    <div class="request">      
+        <h1>POST A REQUEST</h1>
+    </div>
+    <div id="container">
+        <form action="/api/announcements" method="post"> <!-- Set the action to the correct endpoint -->
+            <div class="form-group">
+                <label for="title">TITLE</label>
+                <input type="text" id="title" name="title" required placeholder="Enter the title"> <!-- Added placeholder and required attribute -->
+            </div>
+            <div class="form-group">
+                <label for="description">DESCRIPTION</label>
+                <textarea id="descbox" name="description" rows="4" cols="50" required placeholder="Enter the description"></textarea> <!-- Corrected name attribute and added required -->
+            </div>
+            <div class="form-group">
+                <label for="contact">CONTACT</label>
+                <input type="text" id="contact" name="contact" required placeholder="Enter your contact information"> <!-- Added placeholder and required attribute -->
+            </div>
+            <button type="submit" class="button">POST</button>
+        </form>
+    </div>
+    <div class="footer" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+        <p>&copy; 2024 Skilled Mates. All rights reserved.</p>
+    </div>
+    <script src="JavaScript files/post.js"></script>
+</body>
+</html>

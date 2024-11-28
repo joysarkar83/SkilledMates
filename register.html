@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <style>
+    @font-face {
+      font-family: fonty;
+      src: url(fonts/Anton-Regular.ttf);
+    }
+    @font-face {
+      font-family: fontie;
+      src: url(fonts/Caros\ ExtraBold.otf);
+    }
+    @font-face {
+      font-family: fontish;
+      src: url(fonts/Caros\ Bold.otf);
+    }
+    @font-face {
+      font-family: fontu;
+      src: url(fonts/JosefinSans-VariableFont_wght.ttf)
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+      background-color: #B8885A;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h1 {
+      font-family: fontie;
+      text-align: center;
+      margin-bottom: 20px;
+      color: aqua;
+    }
+    h3 {
+      font-family: fontish;
+      margin-bottom: 10px;
+      color: #C7C9D8;
+    }
+    input[type="text"], input[type="password"], input[type="email"] {
+      font-family: fontu;
+      font-size: 20px;
+      color: #C7C9D8;
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 50px;
+      background-color: #2C150D;
+      border: 1px solid #ddd;
+      border-radius: 100px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 200px; /* Set a fixed width */
+      font-size: large;
+      font-family: fontu;
+      background-color: #39b83f;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 300px;
+      cursor: pointer;
+      margin-left: 35%;
+    }
+    button:hover {
+      background-color: #4CAF50;
+      box-shadow: 0 0 15px rgb(77, 234, 5, 0.5);
+    }
+    .signup-link {
+      color: #C7C9D8;
+      font-family: fontu;
+      text-align: center;
+      margin-top: 20px;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      align-items: center;
+      background-color: #2C150D;
+      padding: 30px;
+      width: 600px;
+      height: 600px;
+      margin-right: 150px;
+    }
+    #img {
+      transform: rotate(90deg);
+      width: 660px;
+      height: 600px;
+      padding-left: 3px;
+      padding-bottom: 62px;
+      margin-left: 100px;
+    }
+
+    .vibrate {
+    animation: vibrate 0.5s;
+}
+
+@keyframes vibrate {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 0); }
+    40% { transform: translate(2px, 0); }
+    60% { transform: translate(-2px, 0); }
+    80% { transform: translate(2px, 0); }
+    100% { transform: translate(0); }
+}
+  </style>
+</head>
+<body>
+  <div>
+    <img src="images/signup_img.png" width="400px" height="200px" id="img">
+  </div>
+  <div class="container">
+    <h1>Sign Up</h1>
+    <form action="/api/register" method="post">
+      <h3>Username</h3>
+      <input type="text" placeholder="Username" name="name" required>
+      <h3>Email</h3>
+      <input type="email" placeholder="Email" name="email" required>
+      <h3>Password</h3>
+      <input type="password" placeholder="Password" name="password" required>
+      <button id="createAccountButton" type="submit">Create Account</button>
+    </form>
+    <div class="signup-link">
+      <p>Already have an account? <a href="index.html">Login here</a></p>
+    </div>
+  </div>
+  <script src="JavaScript files/signup.js"></script>
+</body>
+</html>

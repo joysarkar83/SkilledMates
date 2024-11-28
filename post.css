@@ -1,0 +1,195 @@
+body {
+    background-color: #eff6be;
+    margin: 0px;
+    padding: 0px
+  }
+.header {
+    background-color: #2F1606;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img {
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+}
+.header h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header .right {
+    display: flex;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header .right a {
+    text-decoration: none;
+    color: #f2f2f2;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  
+.request{
+    color: #2F1606;
+    font-size: large;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#container {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #2F1606;
+    box-shadow: 0 0 20px #2F1606;
+}
+
+.form-group {
+    margin-bottom: 0px; /* Space between form groups */
+}
+
+label {
+    padding-top: 30px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #eff6be;
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Make labels bold */
+}
+
+input{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    width: 80%; /* Make inputs take full width */
+    margin: 0px;
+    padding: 5px; /* Add padding inside inputs */
+    background-color: #eff6be;
+    border: 1px solid #b2b697; /* Input border */
+    border-radius: 19px; /* Round input corners */
+    box-sizing: border-box; /* Include padding in width */
+    padding-left: 35px;
+    padding-right: 35px;
+    text-align: center;
+}
+textarea{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    width: 85%; /* Make inputs take full width */
+    margin: 0px;
+    padding: 5px; /* Add padding inside inputs */
+    background-color: #eff6be;
+    border: 1px solid #b2b697; /* Input border */
+    border-radius: 19px; /* Round input corners */
+    box-sizing: border-box; /* Include padding in width */
+    padding-left: 35px;
+    padding-right: 35px;
+}
+#descbox{
+    height: 130px;
+    resize: none;
+}
+
+#contact{
+    width: 350px;
+}
+
+#descbox::-webkit-scrollbar {
+    width: 12px; /* Wider scrollbar */
+}
+
+#descbox::-webkit-scrollbar-thumb {
+    background: #4CAF50; /* Green color */
+    border: 3px solid #f1f1f1; /* Creates padding around the thumb */
+    border-radius: 10px;
+}
+
+#descbox::-webkit-scrollbar-track {
+    background: #eff6be; /* Lighter track background */
+    border-radius: 10px;
+    margin: 10px 30px 10px 0px;
+}
+
+
+#profile-link:hover {
+    text-shadow: 0 0 10px rgba(239, 246, 190, 0.9);
+    transition: text-shadow 0.1s ease;
+}
+
+#post-link:hover {
+    text-shadow: 0 0 10px rgba(239, 246, 190, 0.9);
+    transition: text-shadow 0.1s ease;
+}
+
+#logout-link:hover {
+    text-shadow: 0 0 10px rgba(239, 246, 190, 0.9);
+    transition: text-shadow 0.1s ease;
+}
+
+button {
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #eff6be; /* Button background color */
+    color: #2F1606; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* Remove button border */
+    border-radius: 18px; /* Round button corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 18px; /* Button font size */
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.footer {
+    background-color: #2F1606;
+    text-align: center;
+    padding: 10px;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer p {
+    margin: 0;
+    color: #eff6be;
+}
+
+#profile-link:hover {
+    text-shadow: 0 0 20px rgba(239, 246, 190, 1);
+    transition: text-shadow 0.1s ease;
+}
+
+#home-link:hover {
+    text-shadow: 0 0 20px rgba(239, 246, 190, 1);
+    transition: text-shadow 0.1s ease;
+}
+
+#logout-link:hover {
+    text-shadow: 0 0 20px rgba(239, 246, 190, 1);
+    transition: text-shadow 0.1s ease;
+}
+
+#title:hover{
+    border: #2F1606;
+    box-shadow: 0 0 10px rgba(239, 246, 190, 1);
+    transition: text-shadow 0.1s ease;
+}
+#descbox:hover{
+    border: #2F1606;
+    box-shadow: 0 0 10px rgba(239, 246, 190, 1);
+    transition: text-shadow 0.1s ease;
+}
+#contact:hover{
+    border: #2F1606;
+    box-shadow: 0 0 10px rgba(239, 246, 190, 1);
+    transition: text-shadow 0.1s ease;
+}
+button:hover {
+    border: #2F1606;
+    box-shadow: 0 0 10px rgba(239, 246, 190, 1);
+    transition: text-shadow 0.1s ease;
+    background-color: orange;
+}
